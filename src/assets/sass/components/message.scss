@@ -1,5 +1,62 @@
-.message-wrap {}
+$letter-color: #fff !default;
 
+// element styles
 .message {
-   font-size: 3em;
+   margin: 1em 0;
+} T
+
+.subline {
+   display: block;
+   font-size: 1.3em;
+   letter-spacing: 0.6em;
+}
+
+.letter {
+   font-size: 5em;
+   color: lighten($letter-color, 25%);
+   text-shadow: 0 0 2rem lighten(saturate($letter-color, 30%), 5%);
+   letter-spacing: -0.05em;
+   display: inline-block;
+
+   &:nth-of-type(2) {
+      transform: translate3d(3px,7px,0) rotate(13deg);
+      animation: flicker 2s ease-in-out infinite;
+   }
+}
+
+// animations
+
+@keyframes flicker {
+   0% {
+      opacity: 1;
+      color: lighten($letter-color, 25%);
+   }
+   5% {
+      opacity: 1;
+   }
+   8% {
+      opacity: 0;
+   }
+   11% {
+      opacity: 1;
+      color: lighten($letter-color, 70%);
+   }
+   13% {
+      opacity: 1;
+   }
+   13.5% {
+      opacity: 0;
+   }
+   14% {
+      opacity: 1;
+   }
+   50% {
+      opacity: 1;
+   }
+   70% {
+      color: lighten($letter-color, 25%);
+   }
+   100% {
+      opacity: 1;
+   }
 }

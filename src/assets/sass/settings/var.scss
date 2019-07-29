@@ -1,4 +1,5 @@
 // define basic colors
+$black: #000;
 $grey: #141414;
 $blue: #08B2B2;
 $magenta: #C4166D;
@@ -10,4 +11,7 @@ $white: #fff;
 // basics/body
 $body-background: $grey;
 $body-font-color: $white;
-$primary-color: $magenta;
+$primary-color: $blue;
+
+// message
+$letter-color: $primary-color;

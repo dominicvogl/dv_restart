@@ -76,6 +76,17 @@ const gulpHTML = () => {
         .pipe(browserSync.stream());
 };
 
+const gulpAssets = () => {
+
+  gulp.src(dist + 'assets/img/*', { force: true })
+      .pipe(plumber())
+      .pipe(clean());
+  gulp.src(src + 'assets/img/**/*.*')
+      .pipe(plumber())
+      .pipe(gulp.dest(dist + 'assets/img/'))
+      .pipe(browserSync.stream());
+};
+
 
 // ################################
 // define gulp tasks
@@ -83,6 +94,7 @@ const gulpHTML = () => {
 gulp.task('sass', gulpSass);
 gulp.task('js', gulpJS);
 gulp.task('html', gulpHTML);
+gulp.task('assets', gulpAssets);
 
 
 // ################################
@@ -93,6 +105,7 @@ gulp.task('default', function () {
     gulpSass();
     gulpJS();
     gulpHTML();
+    gulpAssets();
 
     // Start browsersync server
     browserSync.init({
@@ -101,6 +114,7 @@ gulp.task('default', function () {
 
     // watch some files
     gulp.watch([src + '*.html'], ['html']);
+    gulp.watch([src + 'assets/img/**/*'], ['assets']);
     gulp.watch([src + 'assets/sass/**/*.scss'], ['sass']);
     gulp.watch([src + 'assets/js/**/*.js'], ['js']);
 });
