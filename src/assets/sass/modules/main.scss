@@ -1,0 +1,7 @@
+$body-max-width: 1000px !default;
+
+main {
+   max-width: $body-max-width;
+   margin: 0 auto;
+   text-align: center;
+}

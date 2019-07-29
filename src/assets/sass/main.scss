@@ -1,7 +1,17 @@
-@import "settings/var";
+// Import external Stuff
+@import "../../../node_modules/normalize-css/normalize";
 
-body {
-   background: $ugly;
-   color: $yellow;
-   font-size: 3em;
-}
+// define variables and fonts
+@import "settings/var";
+@import "settings/fonts";
+
+// define basics
+@import "basic/body";
+@import "basic/headlines";
+
+// components
+@import "components/logo";
+@import "components/message";
+
+// modules
+@import "modules/main";

@@ -1,0 +1,33 @@
+$body-background: #fff !default;
+$body-font-color: #222 !default;
+
+$body-animation-speed: 200ms;
+$body-animation-style: ease-in-out;
+
+
+body {
+   background: $body-background;
+   color: $body-font-color;
+   font-family: 'Text Me One', sans-serif;
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+::selection {
+   background-color: $primary-color;
+   color: $white;
+}
+
+a {
+   color: $primary-color;
+   text-decoration: none;
+   transition: color $body-animation-speed $body-animation-style;
+
+   &:hover,
+   &:focus {
+      color: darken($primary-color, 15%);
+   }
+}
