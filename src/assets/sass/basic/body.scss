@@ -22,7 +22,9 @@ body {
 body {
    @include body-background($primary-color);
    color: $body-font-color;
-   font-family: 'Text Me One', sans-serif;
+   //font-family: 'Text Me One', sans-serif;
+   //font-family: 'Sedgwick Ave Display', cursive;
+   font-family: 'Permanent Marker', cursive;
 }
 
 img {
