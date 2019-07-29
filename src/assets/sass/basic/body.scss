@@ -1,12 +1,26 @@
 $body-background: #fff !default;
 $body-font-color: #222 !default;
 
-$body-animation-speed: 200ms;
-$body-animation-style: ease-in-out;
+$body-animation-speed: 200ms !default;
+$body-animation-style: ease-in-out !default;
+$body-animation: $body-animation-speed $body-animation-style !default;
 
+@mixin body-background (
+   $color: $body-background
+) {
+   $color: darken($color, 25%);
+   background: $color;
+   background: linear-gradient(to bottom, $color, darken($color, 25%));
+}
+
+html,
+body {
+   width: 100%;
+   height: 100%;
+}
 
 body {
-   background: $body-background;
+   @include body-background($primary-color);
    color: $body-font-color;
    font-family: 'Text Me One', sans-serif;
 }

@@ -18,11 +18,21 @@ $social-icon-fill: #000 !default;
          width: $size;
          height: $size;
          fill: $white;
+         transition: transform $body-animation, fill $body-animation;
       }
 
-      &:hover {
-         svg {
-            
+      .touch {
+         &:focus {
+            transform: scale(0.9);
+         }
+      }
+
+      .no-touch & {
+         &:hover {
+            svg {
+               transform: rotate(10deg) scale(0.9);
+               fill: $primary-color;
+            }
          }
       }
    }
