@@ -3,7 +3,7 @@ $letter-color: #fff !default;
 // element styles
 .message {
    margin: 1em 0;
-} T
+}
 
 .subline {
    display: block;
@@ -23,6 +23,7 @@ $letter-color: #fff !default;
       animation: flicker 2s ease-in-out infinite;
    }
 }
+
 
 // animations
 
@@ -44,16 +45,16 @@ $letter-color: #fff !default;
    13% {
       opacity: 1;
    }
-   13.5% {
+   15% {
       opacity: 0;
    }
-   14% {
+   17% {
       opacity: 1;
    }
    50% {
       opacity: 1;
    }
-   70% {
+   60% {
       color: lighten($letter-color, 25%);
    }
    100% {

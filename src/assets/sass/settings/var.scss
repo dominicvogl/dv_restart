@@ -1,6 +1,7 @@
 // define basic colors
 $black: #000;
 $grey: #141414;
+$mid-grey: #505050;
 $blue: #08B2B2;
 $magenta: #C4166D;
 $orange: #FA7846;
@@ -15,3 +16,7 @@ $primary-color: $blue;
 
 // message
 $letter-color: $primary-color;
+
+// .socials {
+$social-icon-size: 36px;
+$social-icon-fill: $white;
