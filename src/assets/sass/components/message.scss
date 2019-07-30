@@ -7,8 +7,8 @@ $letter-color: #fff !default;
 
 .subline {
    display: block;
-   font-size: 1.3em;
-   letter-spacing: 0.6em;
+   font-size: 1.35em;
+   letter-spacing: 0.9em;
 }
 
 .letter {
@@ -18,8 +18,13 @@ $letter-color: #fff !default;
    letter-spacing: -0.05em;
    display: inline-block;
 
+   &:nth-of-type(1) {
+      transform: translate3d(-2px,28px,0) rotate(-20deg);
+      animation: flicker 2s ease-in-out infinite;
+   }
+
    &:nth-of-type(2) {
-      transform: translate3d(3px,7px,0) rotate(13deg);
+      transform: translate3d(-4px,17px,0) rotate(-20deg);
       animation: flicker 2s ease-in-out infinite;
    }
 }
